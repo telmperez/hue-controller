@@ -17,6 +17,8 @@ The application consists of,
 
 # Configuration (Environment Variables)
 
+You can update these variables in the conf/application.conf file directly or use the environment variables listed below.
+
 Variable Name | Example Value
 ------------- | --------------
 HUE_HOST | 10.0.0.1
@@ -34,8 +36,10 @@ This should create a deployable zip file containing an embedded web server.
 
 You can sign up for a Philips API developer account if you want their web based documentation. Or you can head on over to their github repo https://github.com/PhilipsHue/PhilipsHueSDK-Java-MultiPlatform-Android for some examples.
 
-There's not a lot to the project and it should be really easy to jump in and add your own changes.
- 
+To get started simply fill in all the required configuration variables in conf/application.conf and start your embedded web container. There's not a lot to the project and it should be really easy to jump in and add your own changes.
+
+Tests are coming soon!?
+
 ## Dependencies
 - Scala
 - Java
