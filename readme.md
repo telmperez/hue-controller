@@ -4,7 +4,7 @@ This is a play scala application used for controlling Philips Hue Lights.
   
 I wrote this application because I didn't like the default yellow colour of the bulbs when they lost power and it's not a configurable option on these lights.
 
-Once you get it started the app will poll the Hue bridge for updates and if any of the lights are in a default (yellow light) setting then it will update the lights to the energize state (white light) setting.
+Once you get it started the app will poll the Hue bridge for updates and if any of the lights are in a default (yellow light) setting then it will update the lights to the energize state (white light) setting. Generally this can take anywhere between 3-10 seconds, depending on the polling setting.
 
 I also store the previous state so it's possible to detect if a light has been turned on or is now reachable and restore it to it's previous setting, I'm considering doing this as a future improvement. 
      
@@ -23,12 +23,12 @@ The application consists of,
 
 You can update these variables in the conf/application.conf file directly or use the environment variables listed below.
 
-Variable Name | Example Value
-------------- | --------------
-HUE_HOST | 10.0.0.1
-HUE_USER_ID | sdfkjha9d8798F7sdf-asdfDFyuj
-HUE_HEARTBEAT_MS | 2000
-PLAY_CRYPTO_SECRET | sdfkjha9d8798F7sdf
+Environment Variable Name | Description | Example Value
+------------- | -------------- | --------------
+HUE_HOST | IP Address of the Hue Bridge | 10.0.0.1
+HUE_USER_ID | Authenticated token obtained from the Hue Bridge | sdfkjha9d8798F7sdf-asdfDFyuj
+HUE_HEARTBEAT_MS | Heartbeat polling time in ms | 2000
+PLAY_CRYPTO_SECRET | Play Crypto Secret | sdfkjha9d8798F7sdf
 
 # Build Artifact
 
